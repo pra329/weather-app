@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="stlye.css">
+</head>
+<body>
+    <div class="wrapper">
+            <div class="">
+                <h1>Weather App</h1>
+            </div>
+            <div class="tab-container">
+                <p class="tab" data_userWeather>Your Weather</p>
+                <p class="tab" data_searchWeather>Search Weather</p>
+            </div>
+            <div class="weather-container">
+                <div class="sub-container grant_location_container">
+                    <img src="./assets/location.png" alt="" width="80" height="80" loading="lazy">
+                <p>Grant Location Access</p>
+                <p>Allow Access To Get Weather Information</p>
+                <button class="btn" data_grant_access>Grant Access</button>
+            </div>
+            <!-- Search Weather Container  -->
+            <form class="form-container" data_search_form>
+                <input placeholder="Search For City..." data-Search_Input/>
+                <button class="btn" type="submit">
+                    <img src="./assets/search.png" width="20" height="20" alt="" loading="lazy"/>
+                </button>
+            </form>
+            <!-- Loading Screen Container -->
+            <div class="sub-container loading_container">
+                <img src="./assets/loading.gif" width="150" height="150" alt="" loading="lazy"/>
+                <p>Loading</p>
+            </div>
+
+            <!-- Show Weather Info -->
+            <div class="user_info_container sub-container">
+                <!-- city name and flag -->
+                <div class="name">
+                    <p data_city_name></p>
+                    <img alt="" data_country_icon/>
+                </div>
+                <!-- weather Description -->
+                <p data_weather_desc></p>
+                <!-- Weather Icon -->
+                <img alt="" data_weather_icon/>
+                <!-- Temperature -->
+                <p data_temp></p>
+                <!-- 3 Cards perameter -->
+                <div class="perameter-container">
+                    <div class="perameter">
+                        <img alt="" src="./assets/wind.png"/>
+                        <p>WINDSPEED</p>
+                        <p data_wind_speed></p>
+                    </div>
+                    <div class="perameter">
+                        <img alt="" src="./assets/humidity.png"/>
+                        <p>HUMIDITY</p>
+                        <p data_humidity></p>
+                    </div>
+                    <div class="perameter">
+                        <img alt="" src="./assets/cloud.png"/>
+                        <p>CLOUDS</p>
+                        <p data_clouds></p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    <script src="app.js"></script>
+</body>
+</html>
